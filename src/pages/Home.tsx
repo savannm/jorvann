@@ -37,7 +37,7 @@ export default function Home() {
           >
             <h1 className="hero-title">
               Hello, I’m Sav.<br />
-              <span className="text-gradient">Digital Specialist.</span>
+              <span className="text-gradient">A Digital Specialist.</span>
             </h1>
             <p className="hero-subtitle">
               Welcome to my portfolio, spanning across multiple sectors. I may not show the most recent works. I hope you enjoy browsing.

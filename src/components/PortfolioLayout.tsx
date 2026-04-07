@@ -7,7 +7,7 @@ export default function PortfolioLayout({ title, subtitle, items }: { title: str
 
   return (
     <>
-      <div className="container" style={{ padding: '3rem 0.75rem 2rem', minHeight: '80vh' }}>
+      <div className="container" style={{ padding: '3rem 0.75rem 2rem', minHeight: '75vh' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export default function PortfolioLayout({ title, subtitle, items }: { title: str
           <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', letterSpacing: '-1px' }} className="text-gradient">{title}</h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>{subtitle}</p>
         </motion.div>
-        
+
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '2.5rem' }}>
           {items.map((item, idx) => (
             <motion.div
@@ -29,17 +29,17 @@ export default function PortfolioLayout({ title, subtitle, items }: { title: str
               style={{ padding: '0.75rem', display: 'flex', flexDirection: 'column' }}
             >
               {item.image ? (
-                <div 
+                <div
                   style={{ cursor: 'zoom-in', overflow: 'hidden', borderRadius: '12px' }}
                   onClick={() => setSelectedImage(item.image as string)}
                 >
-                  <motion.img 
+                  <motion.img
                     loading="lazy"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
-                    src={item.image} 
-                    alt={item.title} 
-                    style={{ width: '100%', height: '240px', objectFit: 'cover', display: 'block', border: '1px solid var(--glass-border)', borderRadius: '12px' }} 
+                    src={item.image}
+                    alt={item.title}
+                    style={{ width: '100%', height: '240px', objectFit: 'cover', display: 'block', border: '1px solid var(--glass-border)', borderRadius: '12px' }}
                   />
                 </div>
               ) : (
@@ -80,7 +80,7 @@ export default function PortfolioLayout({ title, subtitle, items }: { title: str
               padding: '1rem'
             }}
           >
-            <button 
+            <button
               onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
               style={{ position: 'absolute', top: '2rem', right: '2rem', color: '#fff', cursor: 'pointer', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50%', padding: '0.5rem', display: 'flex' }}
             >

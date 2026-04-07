@@ -7,7 +7,7 @@ export default function PortfolioLayout({ title, subtitle, items }: { title: str
 
   return (
     <>
-      <div className="container" style={{ padding: '3rem 0.75rem 2rem', minHeight: '75vh' }}>
+      <div className="container" style={{ padding: '3rem 0.75rem 2rem', minHeight: '70vh' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
